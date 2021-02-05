@@ -6,24 +6,12 @@ import os
 with open('setting.json', 'r', encoding='utf8') as file:
     data = json.load(file)
 
-bot = commands.Bot(command_prefix='>')
+bot = commands.Bot(command_prefix='/')
 
 
 @bot.event
 async def on_ready():
     print('>> Bot is online. <<')
-
-
-@bot.event
-async def on_member_join(member):
-    channel = bot.get_channel(data["New_Channel"])
-    await channel.send(f'{member} join!')
-    print(f'{member} join!')
-
-
-@bot.event
-async def on_member_leave(member):
-    print(f'{member} join!')
 
 
 @bot.command()

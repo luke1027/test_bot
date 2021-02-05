@@ -12,5 +12,6 @@ class Main(CogExtension):
     async def hi(self, ctx):
         await ctx.send("1234")
 
+
 def setup(bot):
     bot.add_cog(Main(bot))

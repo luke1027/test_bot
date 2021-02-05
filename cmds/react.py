@@ -9,7 +9,6 @@ with open('./setting.json', 'r', encoding='utf8') as file:
 
 
 class React(CogExtension):
-    pass
     @commands.command()
     async def img(self, ctx):
         random_pic = random.choice(data["pic"])
